@@ -1,7 +1,7 @@
 import NewspaperHeader from './NewspaperHeader';
 import Ticker from './Ticker';
 import { Mail, CodeXml, UserRound } from 'lucide-react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import SpeedInsights from "../SpeedInsights";
 
 const Layout = ({ children }) => {
   const stats = [
