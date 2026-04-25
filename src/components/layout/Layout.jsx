@@ -1,7 +1,8 @@
 import NewspaperHeader from './NewspaperHeader';
 import Ticker from './Ticker';
 import { Mail, CodeXml, UserRound } from 'lucide-react';
-import SpeedInsights from "../SpeedInsights";
+import SpeedInsights from '../SpeedInsights';
+import { Analytics } from '@vercel/analytics/react';
 
 const Layout = ({ children }) => {
   const stats = [
@@ -20,6 +21,7 @@ const Layout = ({ children }) => {
       <NewspaperHeader />
       <Ticker items={stats} />
       <SpeedInsights />
+      <Analytics />
 
       <main className="flex-grow container mx-auto px-4 py-8">
         {children}
