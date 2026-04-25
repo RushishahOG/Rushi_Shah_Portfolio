@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../ui/ThemeToggle';
 
 const NewspaperHeader = () => {
   const today = new Date().toLocaleDateString('en-US', {
@@ -62,8 +63,9 @@ const NewspaperHeader = () => {
           Focus: AI/ML · GenAI · Financial Modeling · Consulting
         </div>
 
-        <div className="flex-1 text-right">
-          Open to Internships
+        <div className="flex-1 text-right flex justify-end items-center gap-4">
+          <span>Open to Internships</span>
+          <ThemeToggle />
         </div>
       </div>
 
