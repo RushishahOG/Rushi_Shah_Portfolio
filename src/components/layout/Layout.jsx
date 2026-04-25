@@ -1,6 +1,7 @@
 import NewspaperHeader from './NewspaperHeader';
 import Ticker from './Ticker';
 import { Mail, CodeXml, UserRound } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const Layout = ({ children }) => {
   const stats = [
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-[#F9F9F7]">
       <NewspaperHeader />
       <Ticker items={stats} />
+      <SpeedInsights />
 
       <main className="flex-grow container mx-auto px-4 py-8">
         {children}
