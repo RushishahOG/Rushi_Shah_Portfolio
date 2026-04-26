@@ -1,7 +1,12 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ui/ThemeToggle';
+import { animate, stagger, splitText } from 'https://esm.sh/animejs';
 
 const NewspaperHeader = () => {
+  const headingRef = useRef(null);
+  const animationRef = useRef(null);
+  const charsRef = useRef(null);
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -18,7 +23,35 @@ const NewspaperHeader = () => {
         {/* Name / Brand */}
         <div className="flex-1 flex items-center text-[#111111]">
           <Link to="/">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-black tracking-tighter leading-none m-0 hover:text-accent transition-colors">
+            <h1 
+              ref={headingRef}
+              onMouseEnter={() => {
+                if (!headingRef.current) return;
+                
+                if (!charsRef.current) {
+                  const { chars } = splitText(headingRef.current, { words: false, chars: true });
+                  charsRef.current = chars;
+                }
+
+                if (animationRef.current) {
+                  animationRef.current.restart();
+                } else {
+                  animationRef.current = animate(charsRef.current, {
+                    y: [
+                      { to: '-2.75rem', ease: 'outExpo', duration: 600 },
+                      { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
+                    ],
+                    rotate: {
+                      from: '-1turn',
+                      delay: 0
+                    },
+                    delay: stagger(50),
+                    ease: 'inOutCirc'
+                  });
+                }
+              }}
+              className="text-4xl md:text-5xl lg:text-7xl font-serif font-black tracking-tighter leading-none m-0 hover:text-accent transition-colors inline-block"
+            >
               RUSHI SHAH<span className="text-accent">.</span>
             </h1>
           </Link>
