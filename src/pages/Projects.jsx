@@ -1,36 +1,16 @@
 import { EditorialGrid, EditorialColumn } from '../components/ui/EditorialGrid';
 import { CodeXml, ExternalLink, Zap } from 'lucide-react';
 import Button from '../components/ui/Button';
+import { projectsContent } from '../content';
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Neural Stock Engine",
-      category: "AI / Finance",
-      description: "A high-frequency trading simulation using reinforcement learning to optimize portfolio allocation in volatile markets.",
-      tags: ["Python", "PyTorch", "FastAPI"]
-    },
-    {
-      title: "GTM Optimizer",
-      category: "Strategy / GenAI",
-      description: "Automated market research and lead generation pipeline using LLMs to reduce manual effort by 40%.",
-      tags: ["OpenAI", "Node.js", "Redis"]
-    },
-    {
-      title: "Capital Plan 770",
-      category: "Financial Modeling",
-      description: "A comprehensive ₹770 Cr capital structuring plan for a mid-cap manufacturing firm.",
-      tags: ["Excel", "VBA", "Consulting"]
-    }
-  ];
-
   return (
     <EditorialGrid>
       <EditorialColumn span={12} label="Latest Dispatches" icon={Zap}>
-        <h2 className="text-8xl font-serif font-black tracking-tighter mb-12 leading-none">THE ARCHIVE OF WORKS<span className="text-accent">.</span></h2>
+        <h2 className="text-8xl font-serif font-black tracking-tighter mb-12 leading-none">{projectsContent.title}<span className="text-accent">{projectsContent.highlight}</span></h2>
       </EditorialColumn>
       
-      {projects.map((project, i) => (
+      {projectsContent.projects.map((project, i) => (
         <EditorialColumn key={i} span={4} label={project.category} icon={CodeXml}>
           <div className="flex flex-col h-full">
             <h3 className="text-4xl font-serif mb-4 hover:text-accent transition-colors cursor-pointer leading-tight uppercase tracking-tighter">
