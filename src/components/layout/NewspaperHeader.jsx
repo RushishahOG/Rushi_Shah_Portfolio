@@ -15,7 +15,7 @@ const NewspaperHeader = () => {
   });
 
   return (
-    <header className="bg-[#F9F9F7] border-b-[6px] border-[#111111]">
+    <header className="header-deco bg-[#F9F9F7] border-b-[6px] border-[#111111]">
 
       {/* Top Bar */}
       <div className="container mx-auto px-4 py-6 flex justify-between items-center border-b border-[#111111]">
@@ -79,7 +79,7 @@ const NewspaperHeader = () => {
         {/* CTA */}
         <div className="flex-1 flex justify-end">
           <Link to="/resumes">
-            <button className="bg-[#111111] text-[#F9F9F7] px-8 py-3 text-xs font-googlesans font-bold uppercase tracking-widest hover:bg-accent transition-colors">
+            <button className="header-btn bg-[#111111] text-[#F9F9F7] px-8 py-3 text-xs font-googlesans font-bold uppercase tracking-widest hover:bg-accent transition-colors">
               View Resume
             </button>
           </Link>
@@ -105,23 +105,23 @@ const NewspaperHeader = () => {
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-3 flex justify-center gap-12 font-googlesans font-medium text-xs uppercase tracking-[0.3em]">
 
-        <Link to="/about" className="hover:text-accent border-b border-transparent hover:border-accent transition-all">
+        <Link to="/about" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           About
         </Link>
 
-        <Link to="/projects" className="hover:text-accent border-b border-transparent hover:border-accent transition-all">
+        <Link to="/projects" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           Projects
         </Link>
 
-        <Link to="/case-decks" className="hover:text-accent border-b border-transparent hover:border-accent transition-all">
+        <Link to="/case-decks" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           Case Competitions Decks
         </Link>
 
-        <Link to="/achievements" className="hover:text-accent border-b border-transparent hover:border-accent transition-all">
+        <Link to="/achievements" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           Achievements
         </Link>
 
-        <Link to="/contact" className="hover:text-accent border-b border-transparent hover:border-accent transition-all">
+        <Link to="/contact" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           Contact
         </Link>
 

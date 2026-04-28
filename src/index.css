@@ -8,6 +8,14 @@
   --color-muted: #E5E5E0;
   --color-accent: #CC0000;
 
+  /* Art Deco Dark Theme */
+  --color-art-deco-bg: #0A0A0A;
+  --color-art-deco-fg: #F2F0E4;
+  --color-art-deco-gold: #D4AF37;
+  --color-art-deco-card: #141414;
+  --color-art-deco-muted: #888888;
+  --color-art-deco-border: #2A2A2A;
+
   --font-serif: "EB Garamond", "Playfair Display", "serif";
   --font-googlesans: "Google Sans Flex", "sans-serif";
   --font-stack: "Stack Sans Headline", "sans-serif";
@@ -16,6 +24,7 @@
   --font-mono: "JetBrains Mono", "monospace";
 
   --animate-marquee: marquee 25s linear infinite;
+  --animate-gold-glow: gold-glow 2s ease-in-out infinite alternate;
 
   @keyframes marquee {
     from {
@@ -24,6 +33,15 @@
 
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @keyframes gold-glow {
+    from {
+      box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
     }
   }
 }
@@ -94,6 +112,72 @@
   .grayscale-editorial:hover {
     filter: grayscale(0%) sepia(20%);
   }
+
+  /* Art Deco Components */
+  .art-deco-border {
+    position: relative;
+    border: 1px solid var(--color-art-deco-border);
+  }
+
+  .art-deco-border::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border: 1px solid var(--color-art-deco-gold);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .art-deco-glow {
+    transition: all 0.3s ease;
+  }
+
+  .art-deco-glow:hover {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  }
+
+  .art-deco-frame {
+    position: relative;
+  }
+
+  .art-deco-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid var(--color-art-deco-gold);
+    border-right: 2px solid var(--color-art-deco-gold);
+  }
+
+  .art-deco-diamond {
+    position: relative;
+  }
+
+  .art-deco-diamond::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    background: var(--color-art-deco-gold);
+    opacity: 0.6;
+  }
+
+  .art-deco-divider {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), transparent);
+  }
+
+  /* Gold accent line */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), var(--color-art-deco-gold), transparent);
+  }
 }
 
 .drop-cap::first-letter {
@@ -106,35 +190,247 @@
   color: #CC0000;
 }
 
-/* Dark Mode Overrides */
+/* Dark Mode Overrides - Art Deco Theme */
 html.dark body {
-  background-color: #111111;
-  color: #F9F9F7;
+  background-color: var(--color-art-deco-bg);
+  color: var(--color-art-deco-fg);
+  background-image: 
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 html.dark header {
-  background-color: #111111 !important;
-  border-color: #F9F9F7 !important;
+  background-color: var(--color-art-deco-bg) !important;
+  border-color: var(--color-art-deco-gold) !important;
 }
 
 html.dark .bg-\[\#F9F9F7\] {
-  background-color: #111111 !important;
+  background-color: var(--color-art-deco-bg) !important;
 }
 
 html.dark .text-\[\#111111\] {
-  color: #F9F9F7 !important;
+  color: var(--color-art-deco-fg) !important;
 }
 
 html.dark .border-\[\#111111\] {
-  border-color: #F9F9F7 !important;
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark .border-transparent {
+  border-color: var(--color-art-deco-border) !important;
+}
+
+/* Art Deco Button Dark Mode */
+html.dark button.primary,
+html.dark .btn-primary {
+  background-color: var(--color-art-deco-card) !important;
+  color: var(--color-art-deco-fg) !important;
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark button.primary:hover,
+html.dark .btn-primary:hover {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+  border-color: var(--color-art-deco-gold) !important;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+html.dark button.secondary,
+html.dark .btn-secondary {
+  border-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark button.secondary:hover,
+html.dark .btn-secondary:hover {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark button.ghost,
+html.dark .btn-ghost {
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark button.ghost:hover,
+html.dark .btn-ghost:hover {
+  background-color: var(--color-art-deco-card) !important;
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark button.link,
+html.dark .btn-link {
+  color: var(--color-art-deco-gold) !important;
+  text-decoration-color: var(--color-art-deco-gold) !important;
+}
+
+/* Art Deco Card Dark Mode */
+html.dark .card,
+html.dark [class*="Card"] {
+  background-color: var(--color-art-deco-card) !important;
+  border-color: var(--color-art-deco-border) !important;
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark .card-header {
+  border-color: var(--color-art-deco-border) !important;
+  border-bottom-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .card-title {
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark .card-content {
+  color: var(--color-art-deco-muted) !important;
+}
+
+/* Art Deco Header Dark Mode */
+html.dark header,
+html.dark .header-deco {
+  background-color: var(--color-art-deco-bg) !important;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark header .text-\[\#111111\],
+html.dark .header-deco .text-\[\#111111\] {
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark header .border-\[\#111111\],
+html.dark .header-deco .border-\[\#111111\] {
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark header .border-b-\[\#111111\],
+html.dark .header-deco .border-b-\[\#111111\] {
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark header .border-b-\[6px\],
+html.dark .header-deco .border-b-\[6px\] {
+  border-bottom-width: 3px;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark header h1,
+html.dark .header-deco h1 {
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark header h1:hover,
+html.dark .header-deco h1:hover {
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark header .text-accent,
+html.dark .header-deco .text-accent {
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .header-btn,
+html.dark header button {
+  background-color: transparent !important;
+  color: var(--color-art-deco-gold) !important;
+  border: 1px solid var(--color-art-deco-gold) !important;
+}
+
+html.dark .header-btn:hover,
+html.dark header button:hover {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark .nav-link,
+html.dark header nav a {
+  color: var(--color-art-deco-muted) !important;
+}
+
+html.dark .nav-link:hover,
+html.dark header nav a:hover {
+  color: var(--color-art-deco-gold) !important;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+/* Additional Dark Mode Fixes */
+html.dark .bg-neutral-100,
+html.dark [class*="bg-neutral-"],
+html.dark .bg-white {
+  background-color: var(--color-art-deco-card) !important;
+}
+
+html.dark .text-neutral-600,
+html.dark .text-neutral-500 {
+  color: var(--color-art-deco-muted) !important;
+}
+
+html.dark .hover\:text-accent:hover {
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .hover\:bg-white:hover {
+  background-color: var(--color-art-deco-card) !important;
 }
 
 html.dark .border-t-\[\#111111\] {
-  border-color: #F9F9F7 !important;
+  border-color: var(--color-art-deco-gold) !important;
 }
 
 html.dark .border-b-\[\#111111\] {
-  border-color: #F9F9F7 !important;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .border-b-\[6px\] {
+  border-bottom-width: 3px;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .hover\:text-accent:hover {
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .text-accent {
+  color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .bg-\[\#111111\] {
+  background-color: var(--color-art-deco-card) !important;
+}
+
+html.dark .border-b-\[\#111111\] {
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark .hover\:bg-accent:hover {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark .bg-accent {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark .hover\:bg-white:hover {
+  background-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark .text-white {
+  color: var(--color-art-deco-fg) !important;
+}
+
+html.dark .hover\:text-\[\#111111\]:hover {
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark .border-transparent {
+  border-color: var(--color-art-deco-border) !important;
+}
+
+html.dark .hover\:border-\[\#111111\]:hover {
+  border-color: var(--color-art-deco-gold) !important;
 }
 
 /* Theme Toggle Switch */
