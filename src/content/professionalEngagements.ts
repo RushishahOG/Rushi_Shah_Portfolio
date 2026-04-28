@@ -1,6 +1,6 @@
 export const professionalEngagementsContent = {
-  title: "Professional",
-  highlight: "Engagements",
+  title: "Work Experience",
+  highlight: ".",
   engagements: [
     {
       company: "Tech Corp",
