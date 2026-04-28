@@ -15,6 +15,30 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline&display=swap" rel="stylesheet">
   <title>Wall Street Journal</title>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const system = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      
+      console.log('=== Theme Detection ===');
+      console.log('System Theme:', system);
+      console.log('Saved Preference:', saved || 'None');
+      
+      let theme;
+      if (saved === 'dark') {
+        theme = 'dark';
+        console.log('Active Theme: dark (user override)');
+      } else {
+        theme = system;
+        console.log('Active Theme:', system);
+      }
+      console.log('=====================');
+      
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
 
 <body>
