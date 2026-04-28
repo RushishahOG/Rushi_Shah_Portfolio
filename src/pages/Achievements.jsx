@@ -2,6 +2,13 @@ import { EditorialGrid, EditorialColumn } from '../components/ui/EditorialGrid';
 import { Award, Star, Trophy } from 'lucide-react';
 import { achievementsContent } from '../content';
 
+const linkedInPosts = [
+  "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7451256849133207552?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:share:7415686611683717120?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7380997322874208256?collapsed=1",
+  "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7362789166851440640?collapsed=1"
+];
+
 const Achievements = () => {
   return (
     <EditorialGrid>
@@ -10,12 +17,18 @@ const Achievements = () => {
       </EditorialColumn>
 
       <EditorialColumn span={8} label="The Ledger of Impact" icon={Star}>
-        <div className="space-y-12 pr-8">
-          {achievementsContent.honors.map((honor, i) => (
-            <div key={i} className="border-b border-neutral-200 pb-8 last:border-0">
-              <h3 className="text-5xl font-serif mb-2 uppercase tracking-tighter">{honor.title}</h3>
-              <div className="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-4">{honor.issuer}</div>
-              <p className="text-lg text-neutral-600 leading-relaxed italic">"{honor.description}"</p>
+        <div className="linkedin-posts-container pr-4">
+          {linkedInPosts.map((postUrl, i) => (
+            <div key={i} className="linkedin-post mb-6">
+              <iframe
+                src={postUrl}
+                height="500"
+                width="100%"
+                frameBorder="0"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen=""
+                title={`LinkedIn post ${i + 1}`}
+              />
             </div>
           ))}
         </div>

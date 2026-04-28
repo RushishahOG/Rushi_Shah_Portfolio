@@ -16,16 +16,16 @@ const Contact = () => {
           <p className="text-2xl font-serif italic leading-relaxed">
             "{contactContent.intro.text}"
           </p>
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="flex flex-col gap-1">
               <label className="font-mono text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.subject.label}</label>
-              <input type="text" placeholder={contactContent.form.subject.placeholder} className="w-full border-b border-[#111111] py-3 font-mono text-sm focus:outline-none focus:bg-neutral-50" />
+              <input type="text" placeholder={contactContent.form.subject.placeholder} className="input-style w-full py-3 font-mono text-sm" />
             </div>
             <div className="flex flex-col gap-1">
               <label className="font-mono text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.message.label}</label>
-              <textarea rows={6} placeholder={contactContent.form.message.placeholder} className="w-full border-b border-[#111111] py-3 font-serif text-lg focus:outline-none focus:bg-neutral-50 resize-none"></textarea>
+              <textarea rows={6} placeholder={contactContent.form.message.placeholder} className="input-style w-full py-3 font-serif text-lg resize-none"></textarea>
             </div>
-            <Button className="w-full h-16 text-xl">{contactContent.form.button}</Button>
+            <Button className="w-full h-14 text-lg">{contactContent.form.button}</Button>
           </div>
         </div>
       </EditorialColumn>

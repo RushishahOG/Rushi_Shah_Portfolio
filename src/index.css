@@ -47,7 +47,7 @@
 }
 
 @layer base {
-  *:not(.switch):not(.slider):not(.clouds_stars) {
+  *:not(.switch):not(.slider):not(.clouds_stars):not(.input-style):not(textarea) {
     border-color: #111111;
     border-radius: 0 !important;
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24'%3E%3Cpath fill='white' stroke='black' stroke-width='1.5' stroke-linejoin='round' d='M4.5.79v22.42l6.56-6.57h9.29L4.5.79z'%3E%3C/path%3E%3C/svg%3E"), auto;
@@ -174,10 +174,67 @@
   }
 
   /* Gold accent line */
-  .gold-line {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), var(--color-art-deco-gold), transparent);
-  }
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), var(--color-art-deco-gold), transparent);
+}
+
+/* Input Style */
+.input-style,
+.input-style:focus {
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1.5px solid #111111;
+  border-radius: 8px;
+  box-shadow: 2.5px 3px 0 #111111;
+  outline: none;
+  transition: ease 0.25s;
+  background: transparent;
+}
+
+.input-style:focus {
+  box-shadow: 5.5px 7px 0 #111111;
+}
+
+html.dark .input-style {
+  border-color: var(--color-art-deco-border);
+  box-shadow: 2.5px 3px 0 var(--color-art-deco-border);
+  color: var(--color-art-deco-fg);
+  background: var(--color-art-deco-card);
+}
+
+html.dark .input-style:focus {
+  box-shadow: 5.5px 7px 0 var(--color-art-deco-gold);
+  border-color: var(--color-art-deco-gold);
+}
+
+html.dark .input-style::placeholder {
+  color: var(--color-art-deco-muted);
+}
+
+/* LinkedIn Posts Container */
+.linkedin-posts-container {
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-art-deco-gold) var(--color-art-deco-card);
+}
+
+.linkedin-posts-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.linkedin-posts-container::-webkit-scrollbar-track {
+  background: var(--color-art-deco-card);
+}
+
+.linkedin-posts-container::-webkit-scrollbar-thumb {
+  background: var(--color-art-deco-gold);
+}
+
+.linkedin-post iframe {
+  border-radius: 8px;
+}
 }
 
 .drop-cap::first-letter {
@@ -351,6 +408,12 @@ html.dark header nav a {
 html.dark .nav-link:hover,
 html.dark header nav a:hover {
   color: var(--color-art-deco-gold) !important;
+  border-color: var(--color-art-deco-gold) !important;
+}
+
+html.dark footer,
+html.dark footer.bg-\[\#F9F9F7\] {
+  background-color: var(--color-art-deco-bg) !important;
   border-color: var(--color-art-deco-gold) !important;
 }
 
