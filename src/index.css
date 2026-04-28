@@ -232,6 +232,110 @@ html.dark .input-style::placeholder {
   background: var(--color-art-deco-gold);
 }
 
+.cert-card {
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  box-shadow: 4px 4px 0 #111111;
+  transform: translate(-2px, -2px);
+}
+
+.cert-image-container {
+  border-bottom: 1px solid #111111;
+}
+
+html.dark .cert-card {
+  border-color: var(--color-art-deco-border);
+}
+
+html.dark .cert-card:hover {
+  box-shadow: 4px 4px 0 var(--color-art-deco-gold);
+}
+
+html.dark .cert-image-container {
+  background-color: var(--color-art-deco-card);
+  border-color: var(--color-art-deco-border);
+}
+
+html.dark .cert-badge {
+  background-color: var(--color-art-deco-gold) !important;
+  color: var(--color-art-deco-bg) !important;
+}
+
+html.dark .cert-tag {
+  background-color: var(--color-art-deco-card) !important;
+  color: var(--color-art-deco-muted) !important;
+}
+
+html.dark .cert-content {
+  background-color: var(--color-art-deco-card);
+  color: var(--color-art-deco-fg);
+}
+
+html.dark .cert-card .text-neutral-500,
+html.dark .cert-card .text-neutral-600 {
+  color: var(--color-art-deco-muted) !important;
+}
+
+/* Certificate Carousel - Vertical Scroll */
+.cert-carousel-container {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.cert-carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: cert-vertical-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.cert-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.cert-carousel-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, #F9F9F7, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cert-carousel-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, #F9F9F7, transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+html.dark .cert-carousel-fade-top {
+  background: linear-gradient(to bottom, var(--color-art-deco-bg), transparent);
+}
+
+html.dark .cert-carousel-fade-bottom {
+  background: linear-gradient(to top, var(--color-art-deco-bg), transparent);
+}
+
+@keyframes cert-vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 .linkedin-post iframe {
   border-radius: 8px;
 }

@@ -117,6 +117,10 @@ const NewspaperHeader = () => {
           Case Competitions Decks
         </Link>
 
+        <Link to="/professional-engagements" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
+          Professional Engagements
+        </Link>
+
         <Link to="/achievements" className="nav-link hover:text-accent border-b border-transparent hover:border-accent transition-all">
           Achievements
         </Link>

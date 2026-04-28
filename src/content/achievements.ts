@@ -19,8 +19,10 @@ export const achievementsContent = {
     }
   ],
   stats: [
-    { value: "05+", label: "National Wins" },
-    { value: "12+", label: "Key Projects" },
-    { value: "99th", label: "Percentile Performance" }
+    { value: "86%", label: "10th" },
+    { value: "90%", label: "12th" },
+    { value: "8.4 CGPA", label: "Btech" },
+    { value: "15+", label: "Key Projects" },
+    { value: "08+", label: "National Wins" }
   ]
 };
