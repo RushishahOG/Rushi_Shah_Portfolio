@@ -20,7 +20,7 @@ const CaseDecks = () => {
             <h3 className="text-3xl font-serif mb-4 leading-tight uppercase">{deck.title}</h3>
             <p className="text-sm font-bold uppercase tracking-widest mb-2 flex-grow">{deck.domain}</p>
             <Link to={`/case-decks/${deck.slug}`} className="mt-auto">
-              <Button className="w-full flex items-center justify-center gap-2 group-hover:bg-accent transition-colors">
+              <Button className="w-full flex items-center justify-center gap-2 hover:bg-accent hover:text-[#F9F9F7] hover:border-accent transition-colors">
                 <Search size={14} /> Explore Case Solution
               </Button>
             </Link>

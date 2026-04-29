@@ -2,6 +2,8 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ui/ThemeToggle';
 import { animate, stagger, splitText } from 'https://esm.sh/animejs';
+import videoIcon from '../../assets/video.png';
+import resumeIcon from '../../assets/resume.png';
 
 const NewspaperHeader = () => {
   const headingRef = useRef(null);
@@ -77,10 +79,15 @@ const NewspaperHeader = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 flex justify-end gap-4">
           <Link to="/resumes">
-            <button className="header-btn bg-[#111111] text-[#F9F9F7] px-8 py-3 text-xs font-googlesans font-bold uppercase tracking-widest hover:bg-accent transition-colors">
-              View Resume
+            <button className="header-btn bg-[#111111] text-[#F9F9F7] px-8 py-3 text-xs font-googlesans font-bold uppercase tracking-widest hover:bg-accent transition-colors flex items-center gap-2">
+              <span className="icon-resume-color"></span> View Resume
+            </button>
+          </Link>
+          <Link to="/broadcast">
+            <button className="header-btn bg-[#111111] text-[#F9F9F7] px-8 py-3 text-xs font-googlesans font-bold uppercase tracking-widest hover:bg-accent transition-colors flex items-center gap-2">
+              <span className="icon-video-color"></span> Broadcast
             </button>
           </Link>
         </div>

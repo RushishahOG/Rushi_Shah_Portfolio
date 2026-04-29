@@ -173,11 +173,48 @@
     background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), transparent);
   }
 
-  /* Gold accent line */
-.gold-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-art-deco-gold), var(--color-art-deco-gold), transparent);
-}
+  .icon-resume-color {
+    -webkit-mask-image: url('/src/assets/resume.png');
+    mask-image: url('/src/assets/resume.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: #F9F9F7;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+  .icon-video-color {
+    -webkit-mask-image: url('/src/assets/video.png');
+    mask-image: url('/src/assets/video.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: #F9F9F7;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+  .header-btn:hover .icon-resume-color {
+    background-color: #F9F9F7;
+  }
+  .header-btn:hover .icon-video-color {
+    background-color: #F9F9F7;
+  }
+  html.dark .icon-resume-color {
+    background-color: #D4AF37;
+  }
+  html.dark .icon-video-color {
+    background-color: #D4AF37;
+  }
+  html.dark .header-btn:hover .icon-resume-color {
+    background-color: var(--color-art-deco-bg);
+  }
+  html.dark .header-btn:hover .icon-video-color {
+    background-color: var(--color-art-deco-bg);
+  }
 
 /* Input Style */
 .input-style,
