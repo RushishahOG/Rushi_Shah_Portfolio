@@ -2,16 +2,26 @@ import { EditorialGrid, EditorialColumn } from '../components/ui/EditorialGrid';
 import { Award, Star, Trophy } from 'lucide-react';
 import { achievementsContent } from '../content';
 
+import dotslashImg from '../assets/DotSlash 8.0 2nd runners up.jpg';
+import finnovateImg from '../assets/Finnovate IIT Gandhinagar 3rd Position Certificate.jpg';
+import innovestImg from '../assets/Innovest 2.0 2nd Runners Up - Ecell Nirma University.jpg';
+import hacknuImg from '../assets/1st Position Hack-NU-Thon Rapid Ops Track.jpg';
+import arthneetiImg from '../assets/Certificate of Excellence in  ArthNeeti 5.0 - IIM Nagpur.jpg';
+import bloombergImg from '../assets/Bloomberg Market Concepts.jpg';
+import insightxImg from '../assets/Certificate of Excellence in Pitch Deck Submission of InsightX Strategy Challenge.png';
+import indmoneyImg from '../assets/In That Case X INDmoney Case Competition - Kirorimal college.jpg';
+import grantthorntonImg from '../assets/Grant Thornton Bharat CASEino Case Competition 22nd Finalist Certificate.jpg';
+
 const certificateImages = [
-  "src/assets/DotSlash 8.0 2nd runners up.jpg",
-  "src/assets/Finnovate IIT Gandhinagar 3rd Position Certificate.jpg",
-  "src/assets/Innovest 2.0 2nd Runners Up - Ecell Nirma University.jpg",
-  "src/assets/1st Position Hack-NU-Thon Rapid Ops Track.jpg",
-  "src/assets/Certificate of Excellence in  ArthNeeti 5.0 - IIM Nagpur.jpg",
-  "src/assets/Bloomberg Market Concepts.jpg",
-  "src/assets/Certificate of Excellence in Pitch Deck Submission of InsightX Strategy Challenge.png",
-  "src/assets/In That Case X INDmoney Case Competition - Kirorimal college.jpg",
-  "src/assets/Grant Thornton Bharat CASEino Case Competition 22nd Finalist Certificate.jpg",
+  dotslashImg,
+  finnovateImg,
+  innovestImg,
+  hacknuImg,
+  arthneetiImg,
+  bloombergImg,
+  insightxImg,
+  indmoneyImg,
+  grantthorntonImg,
 ];
 
 const certificates = [
