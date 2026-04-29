@@ -2,8 +2,6 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../ui/ThemeToggle';
 import { animate, stagger, splitText } from 'https://esm.sh/animejs';
-import videoIcon from '../../assets/video.png';
-import resumeIcon from '../../assets/resume.png';
 
 const NewspaperHeader = () => {
   const headingRef = useRef(null);

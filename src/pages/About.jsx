@@ -1,6 +1,6 @@
 import { EditorialGrid, EditorialColumn } from '../components/ui/EditorialGrid';
 import { UserRound, Target, Award } from 'lucide-react';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/linkedin/profile.jpg';
 import { aboutContent } from '../content';
 
 const About = () => {

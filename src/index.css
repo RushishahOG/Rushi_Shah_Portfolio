@@ -174,8 +174,8 @@
   }
 
   .icon-resume-color {
-    -webkit-mask-image: url('/src/assets/resume.png');
-    mask-image: url('/src/assets/resume.png');
+    -webkit-mask-image: url('/src/assets/layout/resume.png');
+    mask-image: url('/src/assets/layout/resume.png');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -186,8 +186,20 @@
     height: 1em;
   }
   .icon-video-color {
-    -webkit-mask-image: url('/src/assets/video.png');
-    mask-image: url('/src/assets/video.png');
+    -webkit-mask-image: url('/src/assets/layout/video.png');
+    mask-image: url('/src/assets/layout/video.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: #F9F9F7;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+  .icon-send-color {
+    -webkit-mask-image: url('/src/assets/contact/send.png');
+    mask-image: url('/src/assets/contact/send.png');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -203,16 +215,25 @@
   .header-btn:hover .icon-video-color {
     background-color: #F9F9F7;
   }
+  .header-btn:hover .icon-send-color {
+    background-color: #F9F9F7;
+  }
   html.dark .icon-resume-color {
     background-color: #D4AF37;
   }
   html.dark .icon-video-color {
     background-color: #D4AF37;
   }
+  html.dark .icon-send-color {
+    background-color: #D4AF37;
+  }
   html.dark .header-btn:hover .icon-resume-color {
     background-color: var(--color-art-deco-bg);
   }
   html.dark .header-btn:hover .icon-video-color {
+    background-color: var(--color-art-deco-bg);
+  }
+  html.dark .header-btn:hover .icon-send-color {
     background-color: var(--color-art-deco-bg);
   }
 

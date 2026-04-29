@@ -8,7 +8,7 @@ import {
   Sparkles,
   ArrowRight 
 } from 'lucide-react';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/linkedin/profile.jpg';
 import { homeContent } from '../content';
 
 const iconMap = {
