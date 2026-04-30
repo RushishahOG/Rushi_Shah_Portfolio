@@ -45,6 +45,13 @@ const Resumes = () => {
             <p className="text-sm text-neutral-600 mb-8 flex-grow leading-relaxed">
               {resume.description}
             </p>
+            <div className="mb-6 w-full h-64 overflow-hidden border border-neutral-200">
+              <iframe
+                src={`${resume.file}#view=FitH`}
+                className="w-full h-full"
+                title={`${resume.title} preview`}
+              />
+            </div>
             <div className="space-y-3">
               <a href={resume.file} target="_blank" rel="noopener noreferrer" className="block">
                 <Button className="w-full justify-between group-hover:bg-accent transition-colors">

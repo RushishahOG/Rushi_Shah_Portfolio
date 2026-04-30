@@ -1,6 +1,6 @@
 import { EditorialGrid, EditorialColumn } from '../components/ui/EditorialGrid';
 import { UserRound, Target, Award } from 'lucide-react';
-import profileImg from '../assets/linkedin/profile.jpg';
+import profileImg from '../assets/linkedin/linkedin-profile.jpg';
 import { aboutContent } from '../content';
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
           </div>
           <div className="w-full md:w-1/2 space-y-6 text-lg leading-relaxed">
             {aboutContent.sections.map((section, i) => (
-              <p key={i} className={section.isDropCap ? 'drop-cap' : ''}>
+              <p key={i} className={`${section.isDropCap ? 'drop-cap' : ''} font-raleway`}>
                 {section.title}
               </p>
             ))}

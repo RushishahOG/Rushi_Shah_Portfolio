@@ -1,6 +1,6 @@
 import { ExternalLink, MoreHorizontal, Verified, Pencil } from 'lucide-react';
 import linkedinBanner from '../../assets/linkedin/linkedin-banner.png';
-import profilePhoto from '../../assets/linkedin/profile.jpg';
+import profilePhoto from '../../assets/linkedin/linkedin-profile.jpg';
 import emplayLogo from '../../assets/linkedin/emplay-logo.jpg';
 import nirmaLogo from '../../assets/linkedin/nirma-logo.jpg';
 

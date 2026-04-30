@@ -13,19 +13,19 @@ const Contact = () => {
 
       <EditorialColumn span={7} label="Correspondence" icon={Mail}>
         <div className="space-y-8 pr-12">
-          <p className="text-2xl font-serif italic leading-relaxed">
+          <p className="text-xl font-raleway leading-relaxed">
             "{contactContent.intro.text}"
           </p>
           <div className="space-y-6">
             <div className="flex flex-col gap-1">
-              <label className="font-mono text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.subject.label}</label>
-              <input type="text" placeholder={contactContent.form.subject.placeholder} className="input-style w-full py-3 font-mono text-sm" />
+              <label className="font-raleway text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.subject.label}</label>
+              <input type="text" placeholder={contactContent.form.subject.placeholder} className="input-style w-full py-3 font-raleway text-sm" />
             </div>
             <div className="flex flex-col gap-1">
-              <label className="font-mono text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.message.label}</label>
-              <textarea rows={6} placeholder={contactContent.form.message.placeholder} className="input-style w-full py-3 font-serif text-lg resize-none"></textarea>
+              <label className="font-raleway text-[10px] uppercase tracking-widest opacity-50">{contactContent.form.message.label}</label>
+              <textarea rows={6} placeholder={contactContent.form.message.placeholder} className="input-style w-full py-3 font-raleway text-lg resize-none"></textarea>
             </div>
-            <Button className="w-full h-14 text-lg flex items-center justify-center gap-2 [&_.icon-send-color]:!bg-current">
+            <Button className="w-full h-14 text-lg flex items-center justify-center gap-2 font-stack [&_.icon-send-color]:!bg-current">
               <span className="icon-send-color"></span>
               {contactContent.form.button}
             </Button>

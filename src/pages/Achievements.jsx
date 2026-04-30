@@ -151,20 +151,20 @@ const Achievements = () => {
                 </div>
                 <div className="cert-content p-5">
                   <div className="flex items-start justify-between gap-4 mb-2">
-                    <h3 className="text-xl font-serif font-bold uppercase tracking-tight">{cert.title}</h3>
-                    <span className="cert-badge text-[10px] font-mono uppercase tracking-widest px-3 py-1 bg-accent text-white whitespace-nowrap">
+                    <h3 className="text-xl font-roboto font-bold uppercase tracking-tight">{cert.title}</h3>
+                    <span className="cert-badge text-[10px] font-googlesans uppercase tracking-widest px-3 py-1 bg-accent text-white whitespace-nowrap">
                       {cert.meta.achievement}
                     </span>
                   </div>
-                  <p className="text-sm font-mono text-neutral-500 uppercase tracking-wider mb-3">{cert.subtitle}</p>
+                  <p className="text-sm font-raleway text-neutral-500 uppercase tracking-wider mb-3">{cert.subtitle}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {cert.meta.domain.map((d, j) => (
-                      <span key={j} className="cert-tag text-[10px] font-mono uppercase tracking-widest px-2 py-1 bg-neutral-100 text-neutral-600">
+                      <span key={j} className="cert-tag text-[10px] font-raleway uppercase tracking-widest px-2 py-1 bg-neutral-100 text-neutral-600">
                         {d}
                       </span>
                     ))}
                   </div>
-                  <p className="text-base text-neutral-600 leading-relaxed font-body">{cert.description}</p>
+                  <p className="text-base text-neutral-600 leading-relaxed font-googlesans">{cert.description}</p>
                 </div>
               </div>
             ))}
@@ -178,8 +178,8 @@ const Achievements = () => {
         <div className="space-y-6">
           {achievementsContent.stats.map((stat, i) => (
             <div key={i} className="p-4 border-2 border-[#111111] bg-white">
-              <div className="text-4xl font-serif font-black text-accent">{stat.value}</div>
-              <div className="text-[10px] font-mono uppercase tracking-widest opacity-60">{stat.label}</div>
+              <div className="text-4xl font-googlesans font-black text-accent">{stat.value}</div>
+              <div className="text-[10px] font-roboto uppercase tracking-widest opacity-60">{stat.label}</div>
             </div>
           ))}
         </div>

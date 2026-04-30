@@ -39,15 +39,15 @@ const Layout = ({ children }) => {
             </div>
             <div className="flex gap-16">
               <div className="flex flex-col gap-3">
-                <span className="font-bold uppercase text-[10px] tracking-widest border-b border-[#111111] pb-1">Socials</span>
-                <a href={contactContent.links.github} target="_blank" rel="noopener noreferrer" className="text-xs font-mono uppercase tracking-widest hover:text-accent flex items-center gap-2"><CodeXml size={10} /> Github</a>
-                <a href={contactContent.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-xs font-mono uppercase tracking-widest hover:text-accent flex items-center gap-2"><UserRound size={10} /> Linkedin</a>
-                <a href={contactContent.links.email} className="text-xs font-mono uppercase tracking-widest hover:text-accent flex items-center gap-2"><Mail size={10} /> Email</a>
+                <span className="font-roboto uppercase text-[14px] tracking-widest border-b border-[#111111] pb-1">Socials</span>
+                <a href={contactContent.links.github} target="_blank" rel="noopener noreferrer" className="text-xs font-rubik uppercase tracking-widest hover:text-accent flex items-center gap-2"><CodeXml size={10} /> Github</a>
+                <a href={contactContent.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-xs font-rubik uppercase tracking-widest hover:text-accent flex items-center gap-2"><UserRound size={10} /> Linkedin</a>
+                <a href={contactContent.links.email} className="text-xs font-rubik uppercase tracking-widest hover:text-accent flex items-center gap-2"><Mail size={10} /> Email</a>
               </div>
               <div className="flex flex-col gap-3">
-                <span className="font-bold uppercase text-[10px] tracking-widest border-b border-[#111111] pb-1">Legal</span>
-                <a href="#" className="text-xs font-mono uppercase tracking-widest hover:text-accent">Privacy Policy</a>
-                <a href="#" className="text-xs font-mono uppercase tracking-widest hover:text-accent">Terms of Service</a>
+                <span className="font-roboto uppercase text-[14px] tracking-widest border-b border-[#111111] pb-1">Legal</span>
+                <a href="#" className="text-xs font-rubik uppercase tracking-widest hover:text-accent">Privacy Policy</a>
+                <a href="#" className="text-xs font-rubik uppercase tracking-widest hover:text-accent">Terms of Service</a>
               </div>
             </div>
           </div>

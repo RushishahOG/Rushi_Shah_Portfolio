@@ -16,11 +16,11 @@ const CaseDecks = () => {
       {decks.map((deck, i) => (
         <EditorialColumn key={i} span={4} label={`Case Study #${i + 1}`} icon={Search}>
           <div className="border border-[#111111] p-6 h-full flex flex-col hover:bg-neutral-100 transition-colors cursor-pointer group">
-            <div className="font-mono text-[10px] uppercase tracking-widest text-accent mb-2">{deck.year} // {deck.competition} {deck.rank && `(${deck.rank})`}</div>
-            <h3 className="text-3xl font-serif mb-4 leading-tight uppercase">{deck.title}</h3>
-            <p className="text-sm font-bold uppercase tracking-widest mb-2 flex-grow">{deck.domain}</p>
+            <div className="font-rubik text-[10px] uppercase tracking-widest text-accent mb-2">{deck.year} // {deck.competition} {deck.rank && `(${deck.rank})`}</div>
+            <h3 className="text-3xl font-roboto mb-4 leading-tight uppercase">{deck.title}</h3>
+            <p className="text-sm font-googlesans uppercase tracking-widest mb-2 flex-grow">{deck.domain}</p>
             <Link to={`/case-decks/${deck.slug}`} className="mt-auto">
-              <Button className="w-full flex items-center justify-center gap-2 hover:bg-accent hover:text-[#F9F9F7] hover:border-accent transition-colors">
+              <Button className="w-full flex items-center justify-center gap-2 font-stack hover:bg-accent hover:text-[#F9F9F7] hover:border-accent transition-colors">
                 <Search size={14} /> Explore Case Solution
               </Button>
             </Link>

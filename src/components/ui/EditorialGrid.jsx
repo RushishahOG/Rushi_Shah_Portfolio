@@ -45,7 +45,7 @@ export const EditorialColumn = ({
                 <Icon size={12} strokeWidth={3} />
               </div>
             )}
-            {label && <span className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold">{label}</span>}
+            {label && <span className="font-googlesans text-[10px] uppercase tracking-[0.2em] font-bold">{label}</span>}
           </div>
           <div className="text-[10px] font-mono opacity-30">001</div>
         </div>
